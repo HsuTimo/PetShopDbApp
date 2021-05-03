@@ -42,6 +42,7 @@ namespace PetShopDbApp
             this.btn_New = new System.Windows.Forms.Button();
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid_PetShopDB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@ namespace PetShopDbApp
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(260, 20);
             this.txt_Name.TabIndex = 1;
+            this.txt_Name.TextChanged += new System.EventHandler(this.txt_Name_TextChanged);
             // 
             // txt_Quantity
             // 
@@ -68,6 +70,7 @@ namespace PetShopDbApp
             this.txt_Quantity.Name = "txt_Quantity";
             this.txt_Quantity.Size = new System.Drawing.Size(127, 20);
             this.txt_Quantity.TabIndex = 2;
+            this.txt_Quantity.TextChanged += new System.EventHandler(this.txt_Quantity_TextChanged);
             // 
             // txt_Price
             // 
@@ -75,6 +78,7 @@ namespace PetShopDbApp
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(127, 20);
             this.txt_Price.TabIndex = 3;
+            this.txt_Price.TextChanged += new System.EventHandler(this.txt_Price_TextChanged);
             // 
             // label2
             // 
@@ -160,11 +164,22 @@ namespace PetShopDbApp
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
+            // btn_Clear
+            // 
+            this.btn_Clear.Location = new System.Drawing.Point(176, 418);
+            this.btn_Clear.Name = "btn_Clear";
+            this.btn_Clear.Size = new System.Drawing.Size(126, 31);
+            this.btn_Clear.TabIndex = 13;
+            this.btn_Clear.Text = "Clear selection";
+            this.btn_Clear.UseVisualStyleBackColor = true;
+            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
+            // 
             // PetShopDBForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 496);
+            this.Controls.Add(this.btn_Clear);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.btn_New);
@@ -201,6 +216,7 @@ namespace PetShopDbApp
         private System.Windows.Forms.Button btn_New;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_Clear;
     }
 }
 
